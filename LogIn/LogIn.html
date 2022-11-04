@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LogIn - e-class</title>
+    <link rel="stylesheet" href="LogIn.css">
+</head>
+<body>
+    <div class="BG"></div>
+    <div class="anim"></div>
+    <form action="../Home/Home.html" onsubmit="return validateLogIn()" name="LogIn">
+        <label>User/Correo</label><br><br>
+        <input name="User" type="text"><br><br><br>
+        <label>Contraseña</label><br><br>
+        <input name="Pwd" type="password"><br><br>
+        <br><br><br>
+        <button id="LogButton" type="submit">LogIn</button><br><br>
+        <a href="../Registro/Register.html">¿No te has registrado aún?</a>
+    </form>
+    
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="LogIn.js"></script>
+</body>
+</html>

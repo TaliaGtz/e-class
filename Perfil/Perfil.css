@@ -1,0 +1,101 @@
+@import url('https://fonts.googleapis.com/css2?family=Cabin&family=PT+Sans&display=swap');
+
+/*Globals*/
+*{
+    margin: 0;
+    padding: 0;
+    font-size: 20px;
+    font-family: 'Cabin', sans-serif;
+    /*font-family: 'PT Sans', sans-serif;*/
+}
+::-webkit-scrollbar {
+    display: none;
+}
+.header{
+    height: 300px;
+    padding: 12px;
+    background-image: linear-gradient(180deg, white, rgb(0, 26, 86));
+    margin: 20px;
+    border-bottom-left-radius: 20px 20px;
+    border-bottom-right-radius: 20px 20px;
+}
+
+.profileImg{
+    margin: 15px;
+    width: 200px;
+    border-radius: 200px;
+    border: 5px solid white;
+    transform: translate(0px, 50px);
+    box-shadow: 0 0 12px 2px rgba(0, 0, 0, .2);
+    z-index: 0;
+}
+/*
+.sombra{
+    position: absolute;
+    display: block;
+    background: linear-gradient(rgba(0, 0, 0, .5),rgba(0, 0, 0, .5));
+    width: 200px;
+    height: 110px;
+    bottom: 0;
+    left: 0;
+    transform: translate(47px, -342px);
+    z-index: 5;
+    /*border-radius: 0 0 200px 200px;
+    /*border: 5px solid white;
+    /*border-top: transparent;
+    opacity: 0;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+.sombra:hover{
+    opacity: 1;
+    transition: all 0.3s ease;
+}
+.cambiar-foto{
+    color: white;
+    /*transform: translate(-50px, 0);
+}
+.header a{
+    text-decoration: none;
+}
+.cambiar-foto:hover{
+    color: white;
+}*/
+
+.user-name{
+    margin-top: 14px;
+    transform: translate(240px, 180px);
+    color: white;
+    text-shadow: 0 0 5px rgba(0, 0, 0, .2);
+}
+
+.socials{
+    list-style: none;
+    padding: 0;
+}
+
+.socials li{
+    display: inline-block;
+    margin: 5px;
+    transform: translate(263px, -70px);
+}
+
+.socials a{
+    text-decoration: none;
+    color: lightskyblue;
+    text-shadow: 0 0 5px rgba(0, 0, 0, .2);
+}
+
+.socials i{
+    display: inline-block;
+    margin: 5px;
+    color: lightskyblue;
+    text-shadow: 0 0 5px rgba(0, 0, 0, .2);
+}
+
+.about{
+    padding: 16px;
+    color: #545454;
+    transform: translate(257px, -85px);
+    text-shadow: 0 0 5px rgba(0, 0, 0, .2);
+}

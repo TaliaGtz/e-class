@@ -1,0 +1,59 @@
+@import url('https://fonts.googleapis.com/css2?family=Cabin&family=PT+Sans&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    font-size: 20px;
+    font-family: 'Cabin', sans-serif;
+    /*font-family: 'PT Sans', sans-serif;*/
+}
+
+.BG{
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    background-color: aliceblue;
+    display: flex;
+    justify-content: center;
+    background: linear-gradient(330deg, rgb(254, 95, 119), rgb(112, 59, 218), rgb(59, 182, 231));
+    background-size: 200% 100%;
+    animation: BgGradient 15s ease infinite;
+}
+@keyframes BgGradient{
+    0% {background-position: 0% 50%;}
+    50% {background-position: 100% 50%;}
+    100% {background-position: 0% 50%;}
+}
+
+form{
+    margin: auto;
+    padding: 70px;
+    width: 70%;
+    text-align: center;
+    background-color: skyblue;
+    transform: translate(0, 5%);
+    max-width: 300px;
+    box-shadow: 0 2px 15px 0 rgba(0, 0, 0, 0.324);
+}
+input{
+    width: 97%;
+    outline: none;
+    border-radius: 5px;
+    border: 0px solid;
+    padding: 10px;
+    padding-right: 0px;
+    /*padding-left: 0px;*/
+}
+#RegButton{
+    padding: 10px;
+    width: 100%;
+    border: 0px solid;
+    border-radius: 10px;
+    background-color: cornflowerblue;
+    color: aliceblue;
+    cursor: pointer;
+}
+a{
+    color: rgb(72, 92, 129);
+    text-decoration: none;
+}
