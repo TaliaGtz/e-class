@@ -3,9 +3,16 @@ use Symfony\Component\Mailer\Transport;
 use Symfony\Component\Mailer\Mailer;
 use Symfony\Component\Mime\Email;
 
-$mensajero = $_POST['mensajero'];
-/*echo $mensajero;*/
-send_email_to_user($mensajero);
+
+if ($_GET['bool']==true) {
+    $mensajero = $_POST['mensajero'];
+    /*echo $mensajero;*/
+    send_email_to_user($mensajero);
+}
+else{
+    header("Location: http://localhost:8080/PrograOInternet/Correo/Correo.php");
+    require 'C:/xampp/htdocs/e-class2/LogIn/LogIn.html';
+}
  
 function send_email_to_user($email) {
     require_once 'config.php';

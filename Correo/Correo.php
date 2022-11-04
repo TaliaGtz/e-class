@@ -39,10 +39,10 @@
     <div id="coverCtnSearch"></div>
     
     <br><br>
-    <form action="../index.php" method="POST">
+    <form action="../index.php?bool=true" method="POST">
     <div class="boxMsj">
         <input id="mensajero" class="mensajero" name="mensajero" type="text" placeholder="Destinatario..." readonly> <!---->
-        <a href="../index.php" id="sending"><button id="sendMail">Enviar correo</button></a>
+        <a href="../index.php?bool=true" id="sending"><button id="sendMail">Enviar correo</button></a>
     </div>
     </form>
 
