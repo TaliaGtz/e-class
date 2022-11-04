@@ -10,8 +10,7 @@ if ($_GET['bool']==true) {
     send_email_to_user($mensajero);
 }
 else{
-    header("Location: http://localhost:8080/PrograOInternet/Correo/Correo.php");
-    require 'C:/xampp/htdocs/e-class2/LogIn/LogIn.html';
+    header("Location: http://localhost:8080/e-class2/LogIn/LogIn.html");
 }
  
 function send_email_to_user($email) {
