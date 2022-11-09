@@ -44,7 +44,7 @@
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius incidunt, reprehenderit fugit et officia alias animi autem sed repudiandae labore, nesciunt, voluptate distinctio obcaecati quo magnam nostrum sint velit aspernatur.</p>
         <label>Documentos entregados:</label><br>
         <input class="doc" type="file" disabled><br><br>
-        <button>Devolver</button>
+        <a href="../Tareas/Tareas.php"><button>Devolver</button></a>
     </div>
 
     

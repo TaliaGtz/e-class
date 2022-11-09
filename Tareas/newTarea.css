@@ -25,7 +25,7 @@ input[type=number]{
 /*Tareas*/
 .titleHwk{
     margin: 20px;
-    transform: translateY(-75px);
+    /*transform: translateY(-75px);*/
 }
 
 .titleHwk h3{
@@ -43,6 +43,9 @@ input[type=number]{
 }
 
 /*Valoración*/
+.valoracion{
+    width: auto;
+}
 .points{
     float: right;
     margin: 20px;
@@ -78,7 +81,7 @@ input[type=number]{
 }
 
 .end{
-    margin-bottom: 0;
+    margin-top: 10px;
 }
 
 #publicacion{

@@ -34,7 +34,8 @@
             <option value="value2">Materia</option>
             <option value="value3">Materia</option>
         </select>
-        <p class="end">Endline:</p>
+        <br>
+        <label class="end">Endline:</label>
         <input class="info" type="date" placeholder="Endline">
         <br><br>
         <label>Indicaciones:</label>
@@ -43,7 +44,7 @@
             <div id="commentBoxP" contenteditable="true" dir="auto" class="commentBoxP" placeholder="Escribe aquí las indicaciones..."></div>
         </section>
         <br><br>
-        <button>Publicar</button>
+        <a href="../Tareas/Tareas.php"><button>Publicar</button></a>
     </div>
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
