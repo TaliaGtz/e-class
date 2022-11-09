@@ -1,0 +1,117 @@
+@import url('https://fonts.googleapis.com/css2?family=Cabin&family=PT+Sans&display=swap');
+
+/*Globals*/
+*{
+    margin: 0;
+    padding: 0;
+    font-size: 20px;
+    font-family: 'Cabin', sans-serif;
+    /*font-family: 'PT Sans', sans-serif;*/
+}
+
+* a{
+    text-decoration: none;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+input[type=number]{
+    -moz-appearance: textfield;
+}
+
+/*Tareas*/
+.titleHwk{
+    margin: 20px;
+    transform: translateY(-75px);
+}
+
+.titleHwk h3{
+    font-weight: bolder;
+}
+
+.titleHwk label{
+    color: rgba(0, 0, 0, 0.500);
+    font-size: 20px;
+}
+
+#materia{
+    font-size: 23px;
+    margin-bottom: 2px;
+}
+
+/*Valoración*/
+.points{
+    float: right;
+    margin: 20px;
+    transform: translate(250px, -13px);
+    font-size: 28px;
+}
+
+.doc{
+    margin-top: 10px;
+}
+
+.cal{
+    width: 55px;
+    float: right;
+    transform: translate(250px, 6px);
+    font-size: 28px;
+    border: 2px solid transparent;
+    border-bottom: 1px solid crimson;
+    outline: none;
+}
+
+/*Información*/
+.info{
+    border: 2px solid transparent;
+    border-bottom: 1px solid crimson;
+    outline: none;
+}
+
+.h3{
+    font-weight: bold;
+    font-size: 30px;
+    width: 70%;
+}
+
+.end{
+    margin-bottom: 0;
+}
+
+#publicacion{
+    float: left;
+    width: calc(80% - 80px);
+    min-height: 50px;
+    background: rgba(239, 88, 61, 0.232);
+    padding: 10px;
+    border-radius: 7px;
+}
+
+[contentEditable=true]:empty:not(:focus):before{
+    content:attr(placeholder)
+}
+
+.commentBoxP{ 
+    /*color: snow;*/
+    /*font-size: 17px; */
+    line-height: 1.3em;
+}
+
+[contenteditable] {
+    outline: 0px solid transparent;
+}
+
+/*Botón*/
+.titleHwk button{
+    outline: 0px;
+    border: 0px solid transparent;
+    background-color: mediumslateblue;
+    padding: 7px 13px;
+    border-radius: 25px;
+    color: white;
+    transform: translateY(200px);
+    float: right;
+}

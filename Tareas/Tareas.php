@@ -21,32 +21,40 @@
         <h1 class="title">Tareas LMAD</h1>
     <?php require "C:/xampp/htdocs/PrograOInternet/PhpFks/Nav.php"; ?>
 
+    <a href="../Tareas/newTarea.php"><button class="plus"><i class="fa-solid fa-plus"></i></button></a>
+
     <!--Tareas-->
     <div class="tareas">
         <div class="tareas">
             <a href="../Tareas/TareaInd.php"><div class="card">
                 <h4>Título</h4>
                 <p>Endline</p>
+                <img src="../Extras/BG1.jpg">
             </div></a>
             <a href="../Tareas/TareaInd.php"><div class="card">
                 <h4>Título largo</h4>
                 <p>Endline</p>
+                <img src="../Extras/BG2.jpg">
             </div></a>
             <a href="../Tareas/TareaInd.php"><div class="card">
                 <h4>Título más largo</h4>
                 <p>Endline</p>
+                <img src="../Extras/BG3.jpg">
             </div></a>
             <a href="../Tareas/TareaInd.php"><div class="card">
                 <h4>Título aún más largo</h4>
                 <p>Endline</p>
+                <img src="../Extras/BG4.jpg">
             </div></a>
             <a href="../Tareas/TareaInd.php"><div class="card">
                 <h4>Título aún más más más largo</h4>
                 <p>Endline</p>
+                <img src="../Extras/BG5.jpg">
             </div></a>
             <a href="../Tareas/TareaInd.php"><div class="card">
                 <h4>Título aún más más más más más largo</h4>
                 <p>Endline</p>
+                <img src="../Extras/BG6.jpg">
             </div></a>
         </div>
     </div>
