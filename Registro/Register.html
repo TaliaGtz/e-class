@@ -9,19 +9,22 @@
 </head>
 <body>
     <div class="BG"></div>
-    <form action="../LogIn/LogIn.html">
+    <form method="POST" action="../Registro/Conexion.php">   <!--../LogIn/LogIn.html-->
         <label>Nombres</label>
-        <input type="text"><br><br>
+        <input type="text" name="nombres"><br><br>
         <label>Apellidos</label>
-        <input type="text"><br><br>
+        <input type="text" name="apellidos"><br><br>
         <label>Fecha de nacimiento</label>
-        <input type="date"><br><br>
+        <input type="date" name="fechaNac"><br><br>
         <label>Correo</label>
-        <input type="email"><br><br>
+        <input type="email" name="correo"><br><br>
         <label>Username</label>
-        <input type="text"><br><br>
+        <input type="text" name="username"><br><br>
         <label>Contraseña</label>
-        <input type="password"><br><br>
+        <input type="password" name="password"><br><br>
+        <label>¿Quién eres?</label><br>
+        <input type="radio" name="rol" class="rol" value="Estudiante"> Estudiante
+        <input type="radio" name="rol" class="rol" value="Profesional"> Profesional<br><br>
         <br><br>
         <button id="RegButton" type="submit">Registrarse</button><br><br>
         <a href="../LogIn/LogIn.html">¿Ya estás registrado?</a>

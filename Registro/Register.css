@@ -11,7 +11,7 @@
 .BG{
     position: absolute;
     width: 100vw;
-    height: 100vh;
+    height: 120vh;
     background-color: aliceblue;
     display: flex;
     justify-content: center;
@@ -56,4 +56,8 @@ input{
 a{
     color: rgb(72, 92, 129);
     text-decoration: none;
+}
+
+.rol{
+    width: 10%;
 }
