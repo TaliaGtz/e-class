@@ -1,19 +1,6 @@
 <?php
 
-    $servidor   = "localhost";
-    $usuario    = "root";
-    $pwd        = "";
-    $DB         = "e-class";
-
-    //Abriendo la conexión
-    $conexion = mysqli_connect($servidor, $usuario, $pwd, $DB);
-
-    if(!$conexion){
-        echo "Falló la conexión <br>";
-        die("Connection failed: " . mysqli_connect_error());
-    }else{
-        //echo "Conexión exitosa";
-    }
+    include("../PhpFks/Conexion.php");
 
     //Se guardan los datos de los nombres de los inputs a la tabla en la base de datos
     $nombres    = $_POST["nombres"];
@@ -50,6 +37,7 @@
         )";
         if(mysqli_query($conexion, $sql)){  //Ejecutamos el query y verificamos si se guardaron los datos
             echo "Tu cuenta ha sido creada";
+            header("Location: http://localhost:8080/e-class2/LogIn/LogIn.html");
             //echo "<br><a href='../LogIn/LogIn.html'>Iniciar Sesión</a>";
         }else{
             /*echo '<script type="text/javascript">

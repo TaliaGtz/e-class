@@ -1,3 +1,10 @@
+<?php
+
+    include("../PhpFks/Conexion.php");
+    include("../PhpFks/validateLogIn.php");
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>

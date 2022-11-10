@@ -6,15 +6,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>LogIn - e-class</title>
     <link rel="stylesheet" href="LogIn.css">
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 </head>
 <body>
     <div class="BG"></div>
     <div class="anim"></div>
-    <form action="../Home/Home.html" onsubmit="return validateLogIn()" name="LogIn">
-        <label>User/Correo</label><br><br>
-        <input name="User" type="text"><br><br><br>
+    <form method="POST" action="../LogIn/LogIn.php" onsubmit="return validateLogIn()" name="LogIn">
+        <label>User</label><br><br>
+        <input name="username" type="text"><br><br><br>
         <label>Contraseña</label><br><br>
-        <input name="Pwd" type="password"><br><br>
+        <input name="password" type="password"><br><br>
         <br><br><br>
         <button id="LogButton" type="submit">LogIn</button><br><br>
         <a href="../Registro/Register.html">¿No te has registrado aún?</a>

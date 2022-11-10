@@ -6,7 +6,7 @@
 <div class="navBtns">
     <ul class="nav nav-fill">
         <li class="nav-item">
-            <a class="nav-link" href="../Home/Home.html">Grupos</a>
+            <a class="nav-link" href="../Home/Home.php">Grupos</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="../Carrera/Carrera.php">Tablero</a>
