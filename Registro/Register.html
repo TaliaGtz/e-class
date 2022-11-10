@@ -6,26 +6,37 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Register - e-class</title>
     <link rel="stylesheet" href="Register.css">
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 </head>
 <body>
     <div class="BG"></div>
-    <form method="POST" action="../Registro/Conexion.php">   <!--../LogIn/LogIn.html-->
+    <form id="form" method="POST" action="../Registro/Conexion.php" onsubmit="return validar()">   <!--../LogIn/LogIn.html-->
         <label>Nombres</label>
-        <input type="text" name="nombres"><br><br>
+        <input id="names" type="text" name="nombres"><br><br>
         <label>Apellidos</label>
-        <input type="text" name="apellidos"><br><br>
+        <input id="lastnames" type="text" name="apellidos"><br><br>
         <label>Fecha de nacimiento</label>
-        <input type="date" name="fechaNac"><br><br>
+        <input id="birthday" type="date" name="fechaNac"><br><br>
         <label>Correo</label>
-        <input type="email" name="correo"><br><br>
+        <input id="email" type="email" name="correo"><br><br>
         <label>Username</label>
-        <input type="text" name="username"><br><br>
+        <input id="username" type="text" name="username"><br><br>
         <label>Contraseña</label>
-        <input type="password" name="password"><br><br>
+        <!--<input id="passwords" type="password" name="password"><br><br>-->
+        
+        <input id="password" type="Password" name="password" class="form-control">
+        <div class="input-group-append">
+            <button id="show_password" class="btn btn-primary" type="button" onclick="mostrarPassword()"> <span class="fa fa-eye-slash icon"></span> </button>
+        </div>
+        
         <label>¿Quién eres?</label><br>
-        <input type="radio" name="rol" class="rol" value="Estudiante"> Estudiante
+        <input type="radio" name="rol" class="rol" value="Estudiante" required> Estudiante
         <input type="radio" name="rol" class="rol" value="Profesional"> Profesional<br><br>
-        <br><br>
+        <br>
         <button id="RegButton" type="submit">Registrarse</button><br><br>
         <a href="../LogIn/LogIn.html">¿Ya estás registrado?</a>
     </form>

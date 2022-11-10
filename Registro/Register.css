@@ -11,7 +11,7 @@
 .BG{
     position: absolute;
     width: 100vw;
-    height: 120vh;
+    height: 147vh;
     background-color: aliceblue;
     display: flex;
     justify-content: center;
@@ -32,7 +32,7 @@ form{
     text-align: center;
     background-color: skyblue;
     transform: translate(0, 5%);
-    max-width: 300px;
+    max-width: 400px;
     box-shadow: 0 2px 15px 0 rgba(0, 0, 0, 0.324);
 }
 input{
@@ -44,6 +44,9 @@ input{
     padding-right: 0px;
     /*padding-left: 0px;*/
 }
+#show_password{
+    transform: translate(210px, -47px);
+}
 #RegButton{
     padding: 10px;
     width: 100%;
@@ -53,8 +56,13 @@ input{
     color: aliceblue;
     cursor: pointer;
 }
-a{
+
+body a{
     color: rgb(72, 92, 129);
+    text-decoration: none;
+}
+body a:hover{
+    color: rgb(34, 68, 132);
     text-decoration: none;
 }
 

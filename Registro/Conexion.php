@@ -12,7 +12,7 @@
         echo "Falló la conexión <br>";
         die("Connection failed: " . mysqli_connect_error());
     }else{
-        echo "Conexión exitosa";
+        //echo "Conexión exitosa";
     }
 
     //Se guardan los datos de los nombres de los inputs a la tabla en la base de datos
@@ -23,7 +23,7 @@
     $user       = $_POST["username"];
     $password   = $_POST["password"];
     $rol        = $_POST["rol"];
-    $ID         = "00001";
+    $ID         = "";
     
     //encriptación
     $passwordHash = password_hash($password, PASSWORD_BCRYPT);  //BCRYPT es el algoritmo de encriptación, devuelve una cadena de 60 caracteres
@@ -52,10 +52,32 @@
             echo "Tu cuenta ha sido creada";
             //echo "<br><a href='../LogIn/LogIn.html'>Iniciar Sesión</a>";
         }else{
+            /*echo '<script type="text/javascript">
+            swal({
+                title: "Error",
+                text: "Error: " . $sql . "<br>" . mysqli_error($conexion),
+                icon: "error",
+                button: "Aceptar",
+            });
+            </script>';*/
             echo "Error: " . $sql . "<br>" . mysqli_error($conexion);
+            //header("Location: http://localhost:8080/e-class2/Registro/Register.html");
         }
     }else{
-        echo "El nickname ya existe";
+        /*echo '<script type="text/javascript">'
+        , 'alert("sdfsdf");'
+        , '</script>'
+        ;*/
+        echo "El username ya existe";
+        //header("Location: http://localhost:8080/e-class2/Registro/Register.html");
+        /*echo '<script>
+            swal({
+                title: "Error",
+                text: "Error: El username ya existe",
+                icon: "error",
+                button: "Aceptar",
+            });
+        </script>';*/
     }
 
     //Cerrando la conexión

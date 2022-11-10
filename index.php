@@ -57,5 +57,5 @@ function send_email_to_user($email) {
             echo $e->getMessage(); //print the error
         }
     }
-    header("Location: http://localhost:8080/PrograOInternet/Correo/Correo.php");
+    header("Location: http://localhost:8080/e-class2/Correo/Correo.php");
 }
