@@ -17,7 +17,7 @@
     $consulta = mysqli_fetch_array($consulta);  //Devuelve un array o NULL
 
     if($consulta){
-        //echo "introduje:<br>" . $password . "<br>en sql:<br>" . $consulta['Password'] . "<br>";
+        echo "introduje:<br>" . $password . "<br>en sql:<br>" . $consulta['Password'] . "<br>";
         if(password_verify($password, $consulta['Password'])){
             $_SESSION['login']      = true;
             $_SESSION['nombres']    =$consulta['Nombres'];
