@@ -107,6 +107,10 @@ input.src{
     padding: 20px;
 }
 
+.data{
+    transform: translate(15px, 20px);
+}
+
 .referencia label{
     padding-bottom: 10px;
     font-size: 23px;
@@ -129,7 +133,11 @@ input.src{
 
 .referencia .destiny{
     font-size: 16px;
-    transform: translate(-237px, 10px);
+    position: static;
+}
+
+.userData{
+    transform: translate(85px, -60px);
 }
 
 .referencia p{

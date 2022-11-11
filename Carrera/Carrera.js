@@ -104,8 +104,12 @@ panel.setAttribute('style', 'display: block');
 html.appendChild(panel);
 
 var name = document.createElement('h2');
-name.textContent = "e-class";
-panel.appendChild(name);
+name.innerHTML =  "echo" 
+panel.appendChild(name); 
+
+    //alert($_SESSION['user']);
+    //alert("<h3>Hola</h3>");
+    //document.getElementById("demo").innerHTML = "Hello JavaScript!";
 /*
 var msgRB = document.createElement('p');
 msgRB.setAttribute('id', 'IDCatArt' + iCat);

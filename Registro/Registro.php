@@ -13,7 +13,8 @@
     $ID         = "";
     
     //encriptación
-    $passwordHash = password_hash($password, PASSWORD_BCRYPT);  //BCRYPT es el algoritmo de encriptación, devuelve una cadena de 60 caracteres
+    $passwordHash = base64_encode($password);  //, PASSWORD_BCRYPT BCRYPT es el algoritmo de encriptación, devuelve una cadena de 60 caracteres
+    //$passwordHash = substr($passwordHash, 0, 60);
     $fotoPerfil = "../Extras/eClass.png";   //Foto por defecto
 
     //Evaluamos si el user ingresado ya existe
@@ -30,12 +31,13 @@
             '$fechaNac  ',
             '$correo    ',
             '$user      ',
-            '$password  ',
+            '$passwordHash  ',
             '$rol       ',
             '$ID        ',
             '$fotoPerfil'
         )";
         if(mysqli_query($conexion, $sql)){  //Ejecutamos el query y verificamos si se guardaron los datos
+            echo "alert('Tu cuenta ha sido creada')";
             echo "Tu cuenta ha sido creada";
             header("Location: http://localhost:8080/e-class2/LogIn/LogIn.html");
             //echo "<br><a href='../LogIn/LogIn.html'>Iniciar Sesión</a>";

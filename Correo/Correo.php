@@ -57,10 +57,14 @@
         <strong><label>Aparecerás como:</label></strong>
         <br>
         <div class="square">
-            <img src="../Extras/eClass.png" width="70px">
-            <strong><label class="eClass">e-class</label></strong>
-            <label class="eMail"> "e.class2726@gmail.com"</label>
-            <label class="destiny">Destinatario</label>
+            <div class="data">
+                <img src="<?php echo "$_SESSION[fotoPerfil]" ?>" width="70px">
+                <label class="destiny">Destinatario</label>
+                <div class="userData">
+                    <strong><label class="eClass"> <?php echo "$_SESSION[user]" ?> </label></strong>
+                    <label class="eMail"> " <?php echo "$_SESSION[correo]" ?> "</label>
+                </div>
+            </div>
         </div>
         <i class="fa-solid fa-check"></i>
         <p>Powered by Google APIs (Gmail)</p>

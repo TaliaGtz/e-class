@@ -1,6 +1,6 @@
 function validateLogIn() {
-    let User = document.forms["LogIn"]["User"].value;
-    let Pwd = document.forms["LogIn"]["Pwd"].value;
+    let User = document.forms["LogIn"]["username"].value;
+    let Pwd = document.forms["LogIn"]["password"].value;
     if (User == "" || Pwd == "") {
       swal({
         title: "Warning",

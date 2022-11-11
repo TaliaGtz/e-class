@@ -1,7 +1,7 @@
 <?php
 
-    //include("../PhpFks/Conexion.php");
-    //include("../PhpFks/validateLogIn.php");
+    include("../PhpFks/Conexion.php");
+    include("../PhpFks/validateLogIn.php");
     include("../PhpFks/Conexion.php");
 
 ?>

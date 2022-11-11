@@ -16,9 +16,10 @@
     $consulta = mysqli_query($conexion, $consulta);
     $consulta = mysqli_fetch_array($consulta);  //Devuelve un array o NULL
 
+    $pwdHash = base64_encode($password);
     if($consulta){
-        echo "introduje:<br>" . $password . "<br>en sql:<br>" . $consulta['Password'] . "<br>";
-        if(password_verify($password, $consulta['Password'])){
+        //echo "introduje:<br>" . base64_decode($pwdHash) . "<br>en sql:<br>" . base64_decode($consulta['Password']) . "<br>";
+        if(base64_decode($pwdHash) === base64_decode($consulta['Password'])){   //password_verify($pwdHash, $consulta['Password'])
             $_SESSION['login']      = true;
             $_SESSION['nombres']    =$consulta['Nombres'];
             $_SESSION['apellidos']  =$consulta['Apellidos'];

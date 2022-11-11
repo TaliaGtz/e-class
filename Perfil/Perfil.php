@@ -29,8 +29,8 @@
 	<?php require "C:/xampp/htdocs/PrograOInternet/PhpFks/Nav.php"; ?>
 
     <div class="header">
-        <h1 class="user-name">e-class</h1>
-        <img class="profileImg" src="../Extras/eClass.png">
+        <h1 class="user-name"> <?php echo "$_SESSION[user]" ?> </h1>
+        <img class="profileImg" src='<?php echo "$_SESSION[fotoPerfil]" ?>'>
         <!--<div class="sombra"></div>
         <a href="#" class="cambiar-foto">
             <i class="fas fa-camera"></i> 
@@ -38,7 +38,7 @@
         </a>-->
     </div>
     <ul class="socials">
-        <li><i class="fa-solid fa-envelope"></i><a href="../Correo/Correo.php">e.class2726@gmail.com</a></li>
+        <li><i class="fa-solid fa-envelope"></i><a href="../Correo/Correo.php"> <?php echo "$_SESSION[correo]" ?> </a></li>
     </ul>
     <div class="about">
         <p>Desarrollo de aplicaciones para estudiantes.</p>
