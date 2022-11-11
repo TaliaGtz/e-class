@@ -25,15 +25,18 @@
 
     <script type="text/javascript">
         function ajax(){
-            var req = new XMLHttpRequest();
-            req.onreadystatechange = function(){
-                if(req.readyState == 4 && req.status ==  200){
-                    document.getElementById("categorias").innerHTML = req.responseText;
+            var req2 = new XMLHttpRequest();
+            req2.onreadystatechange = function(){
+                if(req2.readyState == 4 && req2.status ==  200){
+                    document.getElementById("categorias").innerHTML = req2.responseText;
+                }
+                if(req2.readyState == 3){
+                    
                 }
             }
             
-            req.open('GET', '../Chats/nombreChat.php', true);
-            req.send();
+            req2.open('GET', '../Chats/nombreChat.php', true);
+            req2.send();
         }
 
         setInterval(function(){ajax();}, 1000);    //refresca la página automáticamente
@@ -63,13 +66,24 @@
         ?>
     </div>
 
-    <div class="categorias">
-        
-    </div>
+    <form id="form-id" method="post" >
+        <div id="categorias" class="categorias">
+            
+        </div>
+    </form>
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="Chats.js"></script>
     <!-- Option 1: Bootstrap Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script>
+        var id="34";
+        function clicked(selectedID){
+            id = selectedID;
+            return selectedID;
+        }
+    </script>
+    <?php $_SESSION['selectedID'] = "WeyYa";?>   <!--<script>document.write(id)</script>-->
+    
 </body>
 </html>

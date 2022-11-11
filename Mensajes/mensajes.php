@@ -39,17 +39,18 @@
     </script>
 </head>
 <body onload="ajax();">
-    
+
     <div class="navTitle">
         <h1 class="title">Mensajes</h1>
     <?php require "C:/xampp/htdocs/PrograOInternet/PhpFks/Nav.php"; ?>
 
     <div id="contenedor">
         <div id="caja-chat">
-            <h3>Chat</h3>
+            <h3><?php echo "$_SESSION[selectedID]"; ?></h3>
+
             <div id="chat">
-                
             </div>
+
         </div>
         <form method="POST" action="../Mensajes/mensajes.php">
             <!-- <input type="text" name="nombre" placeholder="Ingresa tu nombre.."> -->

@@ -15,3 +15,4 @@ sobremi2.addEventListener("mouseover", () => {
 sobremi2.addEventListener("mouseout", () => {
   afectado2.className = "plus";
 }, false)
+

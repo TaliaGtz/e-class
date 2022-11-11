@@ -43,6 +43,10 @@
     <div class="about">
         <p>Desarrollo de aplicaciones para estudiantes.</p>
     </div>
+    <form method="POST" action="../Perfil/fotoUser.php" enctype="multipart/form-data">
+        <input type="file" id="userImg" name="userImg"><br><br>
+        <button id="submitImg" type="submit">Aceptar</button>
+    </form>
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <!-- Option 1: Bootstrap Bundle with Popper -->

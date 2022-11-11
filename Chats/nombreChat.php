@@ -5,10 +5,10 @@
     $consulta = "SELECT * FROM chatnames ORDER BY ID_chatName DESC";
     $ejecutar = $conexion->query($consulta);
     while($fila = $ejecutar->fetch_array()):
-
+        
 ?>
 
-    <a href="../Mensajes/mensajes.php" class="card">
+    <a href="../Mensajes/mensajes.php" name="id" class="card" onclick="return clicked(<?php echo $fila['ID_chatName']; ?>)">
         <div class="text">
             <h3> <?php echo $fila['nombre']; ?> </h3>
         </div>
