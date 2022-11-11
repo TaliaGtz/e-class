@@ -2,7 +2,7 @@
 
     include("../PhpFks/Conexion.php");
     include("../PhpFks/validateLogIn.php");
-    include("../PhpFks/Conexion.php");
+    //include("../PhpFks/Conexion.php");
 
 ?>
 
@@ -52,13 +52,13 @@
             </div>
         </div>
         <form method="POST" action="../Mensajes/mensajes.php">
-            <input type="text" name="nombre" placeholder="Ingresa tu nombre..">
+            <!-- <input type="text" name="nombre" placeholder="Ingresa tu nombre.."> -->
             <textarea name="mensaje" placeholder="Ingresa tu mensaje.."></textarea>
             <input type="submit" name="enviar" value="Enviar"></input>
         </form>
         <?php
             if(isset($_POST['enviar'])){
-                $nombre = $_POST['nombre'];
+                $nombre = "$_SESSION[user]";  //$_POST['nombre'];
                 $mensaje = $_POST['mensaje'];
 
                 $consulta = "INSERT INTO chat(nombre, mensaje) VALUES('$nombre', '$mensaje')";
@@ -78,6 +78,5 @@
     <script src="mensajes.js"></script>
     <!-- Option 1: Bootstrap Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-    <script src="mensajes.js"></script>
 </body>
 </html>

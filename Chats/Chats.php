@@ -22,6 +22,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <script type="text/javascript">
+        function ajax(){
+            var req = new XMLHttpRequest();
+            req.onreadystatechange = function(){
+                if(req.readyState == 4 && req.status ==  200){
+                    document.getElementById("categorias").innerHTML = req.responseText;
+                }
+            }
+            
+            req.open('GET', '../Chats/nombreChat.php', true);
+            req.send();
+        }
+
+        setInterval(function(){ajax();}, 1000);    //refresca la página automáticamente
+    </script>
 </head>
 <body>
     
@@ -29,32 +45,26 @@
         <h1 class="title">Chats LMAD</h1>
     <?php require "C:/xampp/htdocs/PrograOInternet/PhpFks/Nav.php"; ?>
     
+    <div class="chatMenu">
+        <form method="POST" action="../Chats/Chats.php">
+            <div id="afectado" class="chatName">
+                <label>Nombre del chat: </label><input type="text" name="chatName">
+                <button class="btnAceptar" type="submit" name="enviar">Aceptar</button>
+            </div>
+            <button id="sobremi" class="plus"><i class="fa-solid fa-plus"></i></button>
+        </form>
+        <?php
+            if(isset($_POST['enviar'])){
+                $nombre = $_POST['chatName'];
+
+                $consulta = "INSERT INTO chatnames(nombre) VALUES('$nombre')";
+                $ejecutar = $conexion->query($consulta);
+            }
+        ?>
+    </div>
+
     <div class="categorias">
-        <a href="../Mensajes/mensajes.php" class="card">
-            <div class="text">
-                <h3>Chat 1</h3>
-            </div>
-        </a>
-        <a href="../Mensajes/mensajes.php" class="card">
-            <div class="text">
-                <h3>Chat 2</h3>
-            </div>
-        </a>
-        <a href="../Mensajes/mensajes.php" class="card">
-            <div class="text">
-                <h3>Chat 3</h3>
-            </div>
-        </a>
-        <a href="../Mensajes/mensajes.php" class="card">
-            <div class="text">
-                <h3>Chat 4</h3>
-            </div>
-        </a>
-        <a href="../Mensajes/mensajes.php" class="card">
-            <div class="text">
-                <h3>Chat 5</h3>
-            </div>
-        </a>
+        
     </div>
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
