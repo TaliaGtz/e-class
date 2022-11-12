@@ -43,7 +43,7 @@
     <div class="about">
         <p>Desarrollo de aplicaciones para estudiantes.</p>
     </div>
-    <form method="POST" action="../Perfil/fotoUser.php" enctype="multipart/form-data">
+    <form method="POST" action="../PhpFks/leerImg.php" enctype="multipart/form-data">
         <input type="file" id="userImg" name="userImg"><br><br>
         <button id="submitImg" type="submit">Aceptar</button>
     </form>
