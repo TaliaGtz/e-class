@@ -40,7 +40,7 @@
             <li><a class="dropdown-item nav-link" href="../Correo/Correo.php">Correo</a></li>
             <li><a class="dropdown-item nav-link" href="../Tareas/Tareas.php">Tareas</a></li>
             <li><hr class="dropdown-divider"></li>
-            <li><a class="dropdown-item nav-link" href="../LogIn/LogIn.html">Salir</a></li>
+            <li><a class="dropdown-item nav-link" href="../PhpFks/CerrarSesion.php">Salir</a></li>
           </ul>
         </li>
     </ul>
