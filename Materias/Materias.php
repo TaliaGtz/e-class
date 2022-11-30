@@ -26,7 +26,7 @@
     
     <div class="navTitle">
         <h1 class="title">Materias LMAD</h1>
-    <?php require "C:/xampp/htdocs/PrograOInternet/PhpFks/Nav.php"; ?>
+    <?php require "../PhpFks/Nav.php"; ?>
     
     <!--Tareas-->
     <div class="tareasGod">

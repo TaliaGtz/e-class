@@ -26,7 +26,7 @@
     
     <div class="navTitle">
         <h1 class="title">Mi Perfil</h1>
-	<?php require "C:/xampp/htdocs/PrograOInternet/PhpFks/Nav.php"; ?>
+	<?php require "../PhpFks/Nav.php"; ?>
 
     <div class="header">
         <h1 class="user-name"> <?php echo "$_SESSION[user]" ?> </h1>

@@ -27,7 +27,7 @@
     
     <div class="navTitle">
         <h1 class="title">Correo LMAD</h1>
-    <?php require "C:/xampp/htdocs/PrograOInternet/PhpFks/Nav.php"; ?>
+    <?php require "../PhpFks/Nav.php"; ?>
 
     <div class="box">
         <input type="text" id="inputSearch" name="search" class="src" placeholder="Buscar..." autocomplete="off">

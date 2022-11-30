@@ -46,7 +46,7 @@
     
     <div class="navTitle">
         <h1 class="title">Chats LMAD</h1>
-    <?php require "C:/xampp/htdocs/PrograOInternet/PhpFks/Nav.php"; ?>
+    <?php require "../PhpFks/Nav.php"; ?>
     
     <div class="chatMenu">
         <form method="POST" action="../Chats/Chats.php">
