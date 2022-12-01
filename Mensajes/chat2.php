@@ -5,7 +5,6 @@
     $consulta = "SELECT * FROM chat ORDER BY ID_Chat DESC";
     $ejecutar = $conexion->query($consulta);
     while($fila = $ejecutar->fetch_array()):
-        $fila['Mensaje']=base64_decode($fila['Mensaje']);
 ?>      
     <div id="datos-chat">
         <span style="color: darkslateblue"><?php echo $fila['Nombre']; ?>: </span>

@@ -31,6 +31,7 @@
                     document.getElementById("chat").innerHTML = req.responseText;
                 }
             }
+            
             req.open('GET', '../Mensajes/chat.php', true);
             req.send();
         }
@@ -74,7 +75,7 @@
             }
         ?>
     </div>
-
+    <!--button id="hash" class="hash">Encriptar/Desencriptar</!--button-->
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="mensajes.js"></script>
