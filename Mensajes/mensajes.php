@@ -44,6 +44,10 @@
         <h1 class="title">Mensajes</h1>
     <?php require "../PhpFks/Nav.php"; ?>
 
+    <div class="userTitle">
+        <h1 class="utitle">Persona</h1>
+    <?php require "../PhpFks/persona.php"; ?>
+
     <div id="contenedor">
         <div id="caja-chat">
             <h3><?php echo "$_SESSION[selectedID]"; ?></h3>
@@ -60,6 +64,7 @@
         <?php
             if(isset($_POST['enviar'])){
                 $nombre = "$_SESSION[user]";  //$_POST['nombre'];
+                $status = "$_SESSION[status]";
                 $mensaje = $_POST['mensaje'];
 
                 $consulta = "INSERT INTO chat(nombre, mensaje) VALUES('$nombre', '$mensaje')";

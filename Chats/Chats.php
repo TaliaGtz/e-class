@@ -81,9 +81,12 @@
         function clicked(selectedID){
             id = selectedID;
             return selectedID;
+             //if (selectedID != 13){
+               // user
+             //}
         }
     </script>
-    <?php $_SESSION['selectedID'] = "WeyYa";?>   <!--<script>document.write(id)</script>-->
+    <?php $_SESSION['selectedID'] = "Chat";?>   <!--<script>document.write(id)</script>-->
     
 </body>
 </html>
