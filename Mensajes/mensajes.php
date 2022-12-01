@@ -61,6 +61,7 @@
             if(isset($_POST['enviar'])){
                 $nombre = "$_SESSION[user]";  //$_POST['nombre'];
                 $mensaje = $_POST['mensaje'];
+                $mensaje = base64_encode($mensaje);
 
                 $consulta = "INSERT INTO chat(nombre, mensaje) VALUES('$nombre', '$mensaje')";
                 $ejecutar = $conexion->query($consulta);

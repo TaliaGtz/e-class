@@ -8,7 +8,7 @@
 ?>
     <div id="datos-chat">
         <span style="color: darkslateblue"><?php echo $fila['Nombre']; ?>: </span>
-        <span><?php echo $fila['Mensaje']; ?></span>
+        <span><?php echo base64_decode($fila['Mensaje']) ?></span>
         <span style="float: right; color: #848484; font-weight:lighter;"><?php echo formatearFecha($fila['Fecha']); ?></span>
     </div>
 
