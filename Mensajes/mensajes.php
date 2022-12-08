@@ -44,9 +44,9 @@
         <h1 class="title">Mensajes</h1>
     <?php require "../PhpFks/Nav.php"; ?>
 
-    <div class="userTitle">
-        <h1 class="utitle">Persona</h1>
-    <?php require "../PhpFks/persona.php"; ?>
+    <!--div class="userTitle">
+        <h1 class="utitle">Persona</h1>-->
+    <?php //require "../PhpFks/persona.php"; ?>
 
     <div id="contenedor">
         <div id="caja-chat">
@@ -64,8 +64,9 @@
         <?php
             if(isset($_POST['enviar'])){
                 $nombre = "$_SESSION[user]";  //$_POST['nombre'];
-                $status = "$_SESSION[status]";
+                //$status = "$_SESSION[status]";
                 $mensaje = $_POST['mensaje'];
+                $mensaje = base64_encode($mensaje);
 
                 $consulta = "INSERT INTO chat(nombre, mensaje) VALUES('$nombre', '$mensaje')";
                 $ejecutar = $conexion->query($consulta);
