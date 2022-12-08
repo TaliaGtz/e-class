@@ -2,7 +2,7 @@
 
     include("../PhpFks/Conexion.php");
 
-    $consulta = "SELECT * FROM chat ORDER BY ID_Chat DESC";
+    $consulta = "SELECT * FROM chat ORDER BY Fecha DESC";
     $ejecutar = $conexion->query($consulta);
     while($fila = $ejecutar->fetch_array()):
 ?>      

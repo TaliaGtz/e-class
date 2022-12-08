@@ -35,7 +35,7 @@
             req.open('GET', '../Mensajes/chat.php', true);
             req.send();
         }
-
+//?IDBtn=?php echo $IDCN ?>
         setInterval(function(){ajax();}, 1000);    //refresca la página automáticamente
     </script>
 </head>
@@ -49,24 +49,26 @@
         if(isset($_GET['IDBtn'])) {
             $IDCN = $_GET['IDBtn'];
 
-            $consulta = "SELECT nombre
+            $consulta = "SELECT nombre, ID_chatName
                         FROM chatnames 
                         WHERE ID_chatName = '$IDCN'";
             $consulta = mysqli_query($conexion, $consulta);
             $consulta = mysqli_fetch_array($consulta);  //Devuelve un array o NULL
-            $IDCN = $consulta['nombre'];
+            $CN = $consulta['nombre'];
+            $IDCN = $consulta['ID_chatName'];
+            $_SESSION['ID_Chat'] = $IDCN;
         }
     ?>
 
     <div id="contenedor">
         <div id="caja-chat">
-            <h3><?php echo $IDCN; ?></h3>
+            <h3><?php echo $CN; ?></h3>
 
             <div id="chat">
             </div>
 
         </div>
-        <form method="POST" action="../Mensajes/mensajes.php">
+        <form method="POST" action="../Mensajes/mensajes.php?IDBtn=<?php echo $IDCN ?>">
             <!-- <input type="text" name="nombre" placeholder="Ingresa tu nombre.."> -->
             <textarea name="mensaje" placeholder="Ingresa tu mensaje.."></textarea>
             <input type="submit" name="enviar" value="Enviar"></input>
@@ -77,9 +79,18 @@
                 //$status = "$_SESSION[status]";
                 $mensaje = $_POST['mensaje'];
                 $mensaje = base64_encode($mensaje);
+                $ID      = rand(10000, 65535);
 
-                $consulta = "INSERT INTO chat(Nombre, Mensaje) VALUES('$nombre', '$mensaje')";
+                $consulta = "INSERT INTO chat(ID_Chat, Nombre, Mensaje) 
+                            VALUES('$ID', '$nombre', '$mensaje')";
                 $ejecutar = $conexion->query($consulta);
+
+                $sql1 = "INSERT INTO chatxmsj
+                VALUES(
+                    '$IDCN',
+                    '$ID'
+                )";
+                mysqli_query($conexion, $sql1);
 
                 if($ejecutar){
                     echo    "<audio autoplay>
