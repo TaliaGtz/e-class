@@ -8,7 +8,7 @@
         
 ?>
 
-    <a href="../Mensajes/mensajes.php" name="id" class="card" onclick="return clicked(<?php echo $fila['ID_chatName']; ?>)">
+    <a href="../Mensajes/mensajes.php?IDBtn=<?php echo $fila['ID_chatName'] ?>" name="id" class="card" onclick="return clicked(<?php echo $fila['ID_chatName']; ?>)">
         <div class="text">
             <h3> <?php echo $fila['nombre']; ?> </h3>
         </div>

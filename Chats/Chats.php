@@ -86,7 +86,6 @@
              //}
         }
     </script>
-    <?php $_SESSION['selectedID'] = "Chat";?>   <!--<script>document.write(id)</script>-->
     
 </body>
 </html>

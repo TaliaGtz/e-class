@@ -31,6 +31,7 @@
                     document.getElementById("chat").innerHTML = req.responseText;
                 }
             }
+            
             req.open('GET', '../Mensajes/chat.php', true);
             req.send();
         }
@@ -44,13 +45,22 @@
         <h1 class="title">Mensajes</h1>
     <?php require "../PhpFks/Nav.php"; ?>
 
-    <!--div class="userTitle">
-        <h1 class="utitle">Persona</h1>-->
-    <?php //require "../PhpFks/persona.php"; ?>
+    <?php 
+        if(isset($_GET['IDBtn'])) {
+            $IDCN = $_GET['IDBtn'];
+
+            $consulta = "SELECT nombre
+                        FROM chatnames 
+                        WHERE ID_chatName = '$IDCN'";
+            $consulta = mysqli_query($conexion, $consulta);
+            $consulta = mysqli_fetch_array($consulta);  //Devuelve un array o NULL
+            $IDCN = $consulta['nombre'];
+        }
+    ?>
 
     <div id="contenedor">
         <div id="caja-chat">
-            <h3><?php echo "$_SESSION[selectedID]"; ?></h3>
+            <h3><?php echo $IDCN; ?></h3>
 
             <div id="chat">
             </div>
@@ -68,7 +78,7 @@
                 $mensaje = $_POST['mensaje'];
                 $mensaje = base64_encode($mensaje);
 
-                $consulta = "INSERT INTO chat(nombre, mensaje) VALUES('$nombre', '$mensaje')";
+                $consulta = "INSERT INTO chat(Nombre, Mensaje) VALUES('$nombre', '$mensaje')";
                 $ejecutar = $conexion->query($consulta);
 
                 if($ejecutar){
@@ -79,7 +89,7 @@
             }
         ?>
     </div>
-
+    <!--button id="hash" class="hash">Encriptar/Desencriptar</!--button-->
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="mensajes.js"></script>
