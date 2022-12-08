@@ -83,7 +83,7 @@
             return selectedID;
         }
     </script>
-    <?php $_SESSION['selectedID'] = "WeyYa";?>   <!--<script>document.write(id)</script>-->
+    <?php// $_SESSION['selectedID'] = "alo";?>   <!--<script>document.write(id)</script>-->
     
 </body>
 </html>
