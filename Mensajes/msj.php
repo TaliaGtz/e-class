@@ -3,7 +3,7 @@
                 $nombre = "$_SESSION[user]";  //$_POST['nombre'];
                 $mensaje = $_POST['mensaje'];
                 $mensaje = base64_encode($mensaje);
-                $ID_msg = rand(10000, 99999);
+                $ID_msg = rand(10000, 65535);
 
                 $consulta = "INSERT INTO chat(ID_Chat, nombre, mensaje) 
                             VALUES('$ID_msg','$nombre', '$mensaje')";
