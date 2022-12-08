@@ -6,7 +6,9 @@
     $ejecutar = $conexion->query($consulta);
     while($fila = $ejecutar->fetch_array()):
         $fila['Mensaje']=base64_decode($fila['Mensaje']);
+
 ?>      
+
     <div id="datos-chat">
         <span style="color: darkslateblue"><?php echo $fila['Nombre']; ?>: </span>
         <span><?php echo $fila['Mensaje'] ?></span>

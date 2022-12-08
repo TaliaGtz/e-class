@@ -81,9 +81,11 @@
         function clicked(selectedID){
             id = selectedID;
             return selectedID;
+             //if (selectedID != 13){
+               // user
+             //}
         }
     </script>
-    <?php// $_SESSION['selectedID'] = "alo";?>   <!--<script>document.write(id)</script>-->
     
 </body>
 </html>

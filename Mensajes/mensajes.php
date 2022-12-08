@@ -74,6 +74,7 @@
         <?php
             if(isset($_POST['enviar'])){
                 $nombre = "$_SESSION[user]";  //$_POST['nombre'];
+                //$status = "$_SESSION[status]";
                 $mensaje = $_POST['mensaje'];
                 $mensaje = base64_encode($mensaje);
 
