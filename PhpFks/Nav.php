@@ -27,7 +27,7 @@
             <a class="nav-link" href="../Tareas/Tareas.php">Tareas</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="../LogIn/LogIn.html">Salir</a>
+          <a class="nav-link" href="../PhpFks/Desconectar.php">Salir</a>
         </li>
         <li id="navLines" class="lines dropdown">
           <button id="bars btn btn-secondary dropdown-toggle" class="nav-toggle" id="dropdownMenu2" data-bs-toggle="dropdown" aria-expanded="false"><i id="iBars" class="fas fa-bars"></i></button>
@@ -40,7 +40,7 @@
             <li><a class="dropdown-item nav-link" href="../Correo/Correo.php">Correo</a></li>
             <li><a class="dropdown-item nav-link" href="../Tareas/Tareas.php">Tareas</a></li>
             <li><hr class="dropdown-divider"></li>
-            <li><a class="dropdown-item nav-link" href="../PhpFks/CerrarSesion.php">Salir</a></li>
+            <li><a class="dropdown-item nav-link" href="../PhpFks/Desconectar.php">Salir</a></li>
           </ul>
         </li>
     </ul>

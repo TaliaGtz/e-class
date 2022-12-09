@@ -18,7 +18,7 @@
     }*/
 
     function formatearFecha($fecha){
-        return date('g:i a', strtotime($fecha));
+        return date('d/m g:i a', strtotime($fecha));
     }
     
 ?>

@@ -29,7 +29,14 @@
             $_SESSION['password']   =$consulta['Password'];
             $_SESSION['rol']        =$consulta['Rol'];  
             $_SESSION['fotoPerfil'] =$consulta['FotoPerfil'];     
-            
+            $Per                    =$consulta['User']; 
+            $_SESSION['IDP']        =$Per;
+
+            $sql1 = "UPDATE chat
+                    SET Estado = '1'
+                    WHERE Nombre = '$Per'";
+            mysqli_query($conexion, $sql1);
+
             header("Location: http://localhost:8080/e-class2/Home/Home.php");
         }else{
             echo "Contraseña Incorrecta";

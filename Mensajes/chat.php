@@ -8,7 +8,7 @@
 
     $IDCN = $_SESSION['ID_Chat'];
     $Crypt = $_SESSION['crypt'];
-    $consultaCxM  =  "SELECT CN.ID_chatName, CM.ID_msg, C.Nombre, C.Mensaje, C.Fecha
+    $consultaCxM  =  "SELECT CN.ID_chatName, CM.ID_msg, C.Nombre, C.Mensaje, C.Fecha, C.Estado
                         FROM chatnames CN
                         INNER JOIN chatxmsj CM ON CN.ID_chatName = CM.ID_Chat
                         INNER JOIN chat C ON CM.ID_msg = C.ID_Chat
@@ -23,9 +23,28 @@
 ?>      
 
     <div id="datos-chat">
-        <span style="color: darkslateblue"><?php echo $fila['Nombre']; ?>: </span>
-        <span><?php echo $fila['Mensaje'] ?></span>
-        <span style="float: right; color: #848484; font-weight:lighter;"><?php echo formatearFecha($fila['Fecha']); ?></span>
+        <?php
+            $user = $fila['Nombre'];
+            $consulta = "SELECT Estado 
+                        FROM chat
+                        WHERE Nombre = '$user'";
+            $consulta = mysqli_query($conexion, $consulta);
+            $consulta = mysqli_fetch_array($consulta);  //Devuelve un array o NULL
+            $Estado = $consulta['Estado'];
+            if($Estado == "1"){
+                ?> <div class="estado"></div> <?php
+            }else{
+                ?> <div class="estado estadont"></div> <?php
+            }
+        ?>
+        <div class="mensaje">
+            <span style="color: darkslateblue"><?php echo $fila['Nombre']; ?>: </span>
+            <span><?php echo $fila['Mensaje'] ?></span>
+        </div>
+        <div class="fecha">
+            <i class="fa-solid fa-check check"></i>
+            <span style="float: right; color: #848484; font-weight:lighter;"><?php echo formatearFecha($fila['Fecha']); ?></span>
+        </div>
     </div>
 
 <?php endwhile; ?>  

@@ -33,15 +33,50 @@ body a{
     height: 400px;
     overflow-y: scroll;
     margin-bottom: 10px;
+    padding-right: 10px;
 }
 
 #datos-chat{
     width: 100%;
     padding: 5px;
-    margin-bottom: 5px;
+    /*margin-bottom: 5px;*/
+    padding-top: 0;
+    margin-left: 10px;
     border-bottom: 1px solid silver;
     font-weight: bold;
+    height: auto;
 }
+
+.mensaje{
+    max-width: 87%;
+}
+
+.estado{
+    background-color: green;
+    width: 10px;
+    height: 10px;
+    border-radius: 10px;
+    /*position: absolute;
+    transform: translate(-15px, 8px);*/
+    display: flex;
+    transform: translate(-15px, 18px);
+}
+
+.estadont{
+    background-color: brown;
+}
+
+.check{
+    float: right;
+    margin-left: 5px;
+    transform: translateY(5px);
+    color: #848484;
+}
+
+.fecha{
+    transform: translateY(-33px);
+}
+
 /*
 input[type='text']{
     width: 100%;
