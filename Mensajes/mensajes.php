@@ -49,7 +49,7 @@
         if(isset($_GET['IDBtn'])) {
             $IDCN = $_GET['IDBtn'];
 
-            $consulta = "SELECT nombre, ID_chatName
+            $consulta = "SELECT nombre, ID_chatName, hash
                         FROM chatnames 
                         WHERE ID_chatName = '$IDCN'";
             $consulta = mysqli_query($conexion, $consulta);
@@ -57,13 +57,31 @@
             $CN = $consulta['nombre'];
             $IDCN = $consulta['ID_chatName'];
             $_SESSION['ID_Chat'] = $IDCN;
+            $_SESSION['crypt'] = $consulta['hash'];
         }
     ?>
 
     <div id="contenedor">
+        <h3><?php echo $CN; ?></h3>
+        <form method="POST"><button id="hash" type="submit" name="hash" class="hash enc" value="true">Encriptar</button>
+        <button id="hashed" type="submit" name="hashed" class="hash ed" value="true">Desencriptar</button></form>
+        <?php  
+            if(isset($_POST['hash'])) { 
+                $sql1 = "UPDATE chatnames
+                SET hash = '1'
+                WHERE ID_chatName = '$IDCN'";
+                mysqli_query($conexion, $sql1);
+            } 
+            if(isset($_POST['hashed'])) { 
+                $sql1 = "UPDATE chatnames
+                SET hash = '0'
+                WHERE ID_chatName = '$IDCN'";
+                mysqli_query($conexion, $sql1);
+            } 
+        ?>
         <div id="caja-chat">
-            <h3><?php echo $CN; ?></h3>
-
+            
+            
             <div id="chat">
             </div>
 
@@ -85,7 +103,7 @@
                             VALUES('$ID', '$nombre', '$mensaje')";
                 $ejecutar = $conexion->query($consulta);
 
-                $sql1 = "INSERT INTO chatxmsj
+                $sql1 = "INSERT INTO chatxmsj 
                 VALUES(
                     '$IDCN',
                     '$ID'
@@ -100,7 +118,8 @@
             }
         ?>
     </div>
-    <!--button id="hash" class="hash">Encriptar/Desencriptar</!--button-->
+    
+    <a href="../Location/Loc.php"><button class="ubi">Quiero saber mi ubicación</button></a>
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="mensajes.js"></script>

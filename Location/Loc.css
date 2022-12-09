@@ -1,0 +1,26 @@
+@import url('https://fonts.googleapis.com/css2?family=Cabin&family=PT+Sans&display=swap');
+
+/*Globals*/
+*{
+    margin: 0;
+    padding: 0;
+    font-size: 20px;
+    font-family: 'Cabin', sans-serif;
+    /*font-family: 'PT Sans', sans-serif;*/
+}
+
+body a{
+    text-decoration: none;
+}
+
+.feed{
+    width: 100%;
+}
+
+.mapa{
+    position: absolute;
+    display: flex;
+    width: 100%;
+    height: 80%;
+    z-index: 0;
+}

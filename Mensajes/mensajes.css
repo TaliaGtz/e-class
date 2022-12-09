@@ -72,4 +72,62 @@ textarea{
     margin: 20px;
     border: 0px;
     padding: 10px;
+    position: absolute;
+    /*transform: translateY(-20px);*/
+    /*top: 16%;*/
+    top: 140px;
+    right: 20%;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    transition: 0.5s all ease-in-out;
+    border-radius: 10px;
+}
+
+.ed{
+    right: 10%;
+}
+
+.hash:hover{
+    background-color: midnightblue;
+    color: silver;
+    transition: 0.5s all ease-in-out;
+}
+
+.ubi{
+    margin: 20px;
+    border: 0px;
+    padding: 10px;
+    margin-left: 50px;
+    margin-top: 50px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+}
+
+/*Responsive*/
+@media screen and (max-width: 1350px){
+    .enc{
+        right: 25%;
+    }
+}
+@media screen and (max-width: 909px){
+    .enc{
+        right: 30%;
+    }
+}
+@media screen and (max-width: 665px){
+    .enc{
+        right: 35%;
+    }
+}
+@media screen and (max-width: 520px){
+    .hash{
+        right: 0%;
+        top: 17%;
+    }
+    .enc{
+        right: 40%;
+    }
+    #contenedor{
+        width: 100%;
+        border-radius: 0;
+    }
 }

@@ -7,6 +7,7 @@
     //$ejecutar = $conexion->query($consulta);
 
     $IDCN = $_SESSION['ID_Chat'];
+    $Crypt = $_SESSION['crypt'];
     $consultaCxM  =  "SELECT CN.ID_chatName, CM.ID_msg, C.Nombre, C.Mensaje, C.Fecha
                         FROM chatnames CN
                         INNER JOIN chatxmsj CM ON CN.ID_chatName = CM.ID_Chat
@@ -16,8 +17,9 @@
     $ejecutar = $conexion->query($consultaCxM);
 
     while($fila = $ejecutar->fetch_array()):
-        $fila['Mensaje']=base64_decode($fila['Mensaje']);
-
+        if($Crypt == '0'){
+            $fila['Mensaje']=base64_decode($fila['Mensaje']);
+        }
 ?>      
 
     <div id="datos-chat">
