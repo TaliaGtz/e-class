@@ -25,29 +25,23 @@
         <input type="text" id="inputSearch" name="search" class="src" placeholder="Buscar..." autocomplete="off">
     </div>
     <ul id="boxSearch"> <!--Filtro por personas-->
-        <li><a href="../Perfil/Perfil.php"><i class="fas fa-search"></i>SELECCIONAR</a></li>
-        <li><a href="../Perfil/Perfil.php"><i class="fas fa-search"></i>CARLOS ISRAEL ORTA ORTA</a></li>
-        <li><a href="../Perfil/Perfil.php"><i class="fas fa-search"></i>ALAN GARZA HERNÁNDEZ</a></li>
-        <li><a href="../Perfil/Perfil.php"><i class="fas fa-search"></i>TALIA DENISSE GUTIÉRREZ ALVAREZ</a></li>
-        <li><a href="../Perfil/Perfil.php"><i class="fas fa-search"></i>SOFÍA BARRIOS HERNÁNDEZ</a></li>
-        <li><a href="../Perfil/Perfil.php"><i class="fas fa-search"></i>JACOB ABRAHAM PULIDO</a></li>
-        <li><a href="../Perfil/Perfil.php"><i class="fas fa-search"></i>FERNANDO ENRIQUE BUZO MARTÍNEZ</a></li>
-        <li><a href="../Perfil/Perfil.php"><i class="fas fa-search"></i>IRVING ALEXIS FERREIRA DOMÍNGUEZ</a></li>
-        <li><a href="../Perfil/Perfil.php"><i class="fas fa-search"></i>DIEGO ADRIÁN VILLARREAL GARZA</a></li>
+        <li><a href="../Perfil/Perfil.php"><i class="fas fa-search"></i>ABCDEFGHIJKLMNOPQRSTUVWXYZ</a></li>
+        <?php include("../Integrantes/nombreBusc.php"); ?>
     </ul>
     <div id="coverCtnSearch"></div>
 
     <div class="people">
         <h1>Grupo LMAD</h1>
         <ul id="clase">
-            <li><a href="../Perfil/Perfil.php">CARLOS ISRAEL ORTA ORTA</a></li>
+            <!--li><a href="../Perfil/Perfil.php">CARLOS ISRAEL ORTA ORTA</a></li>
             <li><a href="../Perfil/Perfil.php">ALAN GARZA HERNÁNDEZ</a></li>
             <li><a href="../Perfil/Perfil.php">TALIA DENISSE GUTIÉRREZ ALVAREZ</a></li>
             <li><a href="../Perfil/Perfil.php">SOFÍA BARRIOS HERNÁNDEZ</a></li>
             <li><a href="../Perfil/Perfil.php">JACOB ABRAHAM PULIDO</a></li>
             <li><a href="../Perfil/Perfil.php">FERNANDO ENRIQUE BUZO MARTÍNEZ</a></li>
             <li><a href="../Perfil/Perfil.php">IRVING ALEXIS FERREIRA DOMÍNGUEZ</a></li>
-            <li><a href="../Perfil/Perfil.php">DIEGO ADRIÁN VILLARREAL GARZA</a></li>
+            <li><a href="../Perfil/Perfil.php">DIEGO ADRIÁN VILLARREAL GARZA</a></li>-->
+            <?php include("../Integrantes/nombrePer.php"); ?>
         </ul>
     </div>
 

@@ -1,7 +1,7 @@
 <!--<div class="navTitle">
     <h1 class="title">Tablero LMAD</h1>-->
     <a href="../Chats/Chats.php"><button class="group">Crear chat</button></a>
-    <a href="../Perfil/Perfil.php"><img class="profile" src="../Extras/eClass.png" width="67px"></a>
+    <a href="../Perfil/Perfil.php?IDPer=<?php echo "$_SESSION[IDPer]" ?>"><img class="profile" src="../Extras/eClass.png" width="67px"></a>
 </div>
 <div class="navBtns">
     <ul class="nav nav-fill">

@@ -2,6 +2,7 @@
 
     include("../PhpFks/Conexion.php");
     include("../PhpFks/validateLogIn.php");
+    include("../PhpFks/Fecha.php");
 
     //$consulta = "SELECT * FROM chat ORDER BY Fecha DESC";
     //$ejecutar = $conexion->query($consulta);

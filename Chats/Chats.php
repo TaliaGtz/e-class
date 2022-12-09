@@ -48,6 +48,49 @@
         <h1 class="title">Chats LMAD</h1>
     <?php require "../PhpFks/Nav.php"; ?>
     
+    <?php
+        if(isset($_GET['IDPer'])) {
+
+            $IDPer = $_GET['IDPer'];
+            $IDPer1 = $_GET['IDPer1'];
+            $consulta = "SELECT User
+                        FROM persona
+                        WHERE ID_Persona = '$IDPer'";
+            $consulta = mysqli_query($conexion, $consulta);
+            $consulta = mysqli_fetch_array($consulta);  //Devuelve un array o NULL
+            $CN = $consulta['User'];
+            $consulta5 = "SELECT User
+                        FROM persona
+                        WHERE ID_Persona = '$IDPer1'";
+            $consulta5 = mysqli_query($conexion, $consulta5);
+            $consulta5 = mysqli_fetch_array($consulta5);  //Devuelve un array o NULL
+            $CN1 = $consulta5['User'];
+
+            $CHN = $CN1."&".$CN;
+            $IDCN = rand(10000, 65535);
+            $consulta3 = "SELECT nombre
+                        FROM chatnames
+                        WHERE nombre = '$CHN'";
+            $consulta3 = mysqli_query($conexion, $consulta3);
+            $consulta3 = mysqli_fetch_array($consulta3);  //Devuelve un array o NULL
+            if(!$consulta3){   //Si no existe el chat
+                $consulta2 = "INSERT INTO chatnames(ID_chatName, nombre, Privacidad) VALUES('$IDCN', '$CHN', '1')";
+                $consulta2 = mysqli_query($conexion, $consulta2);
+                //$consulta2 = mysqli_fetch_array($consulta2);  //Devuelve un array o NULL
+
+                $consulta4 = "INSERT INTO personaxchatname
+                            VALUES(
+                                '$IDPer1',
+                                '$IDCN',
+                                '$IDPer'
+                                )";
+                $consulta4 = mysqli_query($conexion, $consulta4);
+                
+            }
+            
+        }
+    ?>
+
     <div class="chatMenu">
         <form method="POST" action="../Chats/Chats.php">
             <div id="afectado" class="chatName">
@@ -60,7 +103,7 @@
             if(isset($_POST['enviar'])){
                 $nombre = $_POST['chatName'];
 
-                $consulta = "INSERT INTO chatnames(nombre) VALUES('$nombre')";
+                $consulta = "INSERT INTO chatnames(ID_chatName, nombre) VALUES('$IDCN', '$nombre')";
                 $ejecutar = $conexion->query($consulta);
             }
         ?>

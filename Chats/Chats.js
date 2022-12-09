@@ -17,9 +17,9 @@ sobremi2.addEventListener("mouseout", () => {
 }, false)
 
 var ID_chatName = ["ID_chatName"];
-
+/*
 if (selectedID != 13 ){
   selectedID == 2;
 } else {
  selectedID += 3;
-}
+}*/

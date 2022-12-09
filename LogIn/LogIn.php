@@ -31,6 +31,7 @@
             $_SESSION['fotoPerfil'] =$consulta['FotoPerfil'];     
             $Per                    =$consulta['User']; 
             $_SESSION['IDP']        =$Per;
+            $_SESSION['IDPer']      =$consulta['ID_Persona']; 
 
             $sql1 = "UPDATE chat
                     SET Estado = '1'
