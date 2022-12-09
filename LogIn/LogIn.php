@@ -37,6 +37,11 @@
                     WHERE Nombre = '$Per'";
             mysqli_query($conexion, $sql1);
 
+            $sql2 = "UPDATE chat
+                    SET Visto = '1'
+                    WHERE Nombre = '$Per'";
+            mysqli_query($conexion, $sql2);
+
             header("Location: http://localhost:8080/e-class2/Home/Home.php");
         }else{
             echo "Contraseña Incorrecta";

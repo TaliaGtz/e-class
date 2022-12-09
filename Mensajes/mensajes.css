@@ -70,6 +70,13 @@ body a{
     float: right;
     margin-left: 5px;
     transform: translateY(5px);
+    color: cornflowerblue;
+}
+
+.checknt{
+    float: right;
+    margin-left: 5px;
+    transform: translateY(5px);
     color: #848484;
 }
 

@@ -4,7 +4,7 @@
     include("../PhpFks/validateLogIn.php");
 
     $Per = $_SESSION['IDP'];
-    echo $Per;
+    
     $sql1 = "UPDATE chat
             SET Estado = '0'
             WHERE Nombre = '$Per'";
@@ -12,5 +12,5 @@
 
 ?>
 
-<h1>Seguro que quieres salir?</h1>
+<h1><?php echo $Per;?>, seguro que quieres salir?</h1>
 <a href="../PhpFks/CerrarSesion.php">Sí</a>
