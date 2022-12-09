@@ -38,15 +38,15 @@
                 console.log("Geolocation is not supported by this browser.");
             }
         }
-        
+        //Las mías son: 25.778995712379132, -100.28823484459808
         function showPosition(position) {
-            vlatitude = position.coords.latitude + 0.033176;
-            vlongitude = position.coords.longitude - 0.086964;
+            vlatitude = position.coords.latitude + 0.0462853;
+            vlongitude = position.coords.longitude - 0.0902444;
             //alert(vlatitude);
             //alert(vlongitude);
             //return vlatitude + vlongitude;
-            //console.log(vlatitude);
-            //console.log(vlongitude); 
+            console.log("Latitud: " + vlatitude);
+            console.log("Longitud: " + vlongitude); 
         }
 
         
