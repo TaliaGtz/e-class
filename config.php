@@ -6,7 +6,7 @@ define('GOOGLE_CLIENT_ID', '220393172608-dto83efd0pa3132fpu7ai2aqmm3rutfn.apps.g
 define('GOOGLE_CLIENT_SECRET', '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');
   
 $config = [
-    'callback' => 'http://localhost:8080/PrograOInternet/callback.php',
+    'callback' => 'http://eclass:8080/callback.php',
     'keys'     => [
                     'id' => GOOGLE_CLIENT_ID,
                     'secret' => GOOGLE_CLIENT_SECRET

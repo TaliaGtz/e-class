@@ -29,7 +29,7 @@
         
         if(mysqli_query($conexion, $sql)){  //Ejecutamos el query y verificamos si se guardaron los datos
             echo "alert('Tu foto ha sido guardada')";
-            header("Location: http://localhost:8080/e-class2/PhpFks/leerImg.php");
+            header("Location: http://eclass:8080/PhpFks/leerImg.php");
         }else{
             echo "Error: " . $sql . "<br>" . mysqli_error($conexion);
         }

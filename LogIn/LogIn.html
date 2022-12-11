@@ -32,7 +32,7 @@
         obtener(variable);
 
         function obtener(variable){
-            fetch('http://localhost:8080/e-class2/API/' + variable)
+            fetch('http://eclass:8080/API/' + variable)
             .then(datos=>datos.json())
             .then(datos=>{
                 var resultado = document.getElementById('username');

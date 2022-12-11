@@ -35,7 +35,6 @@
             req.open('GET', '../Mensajes/chat.php', true);
             req.send();
         }
-//?IDBtn=?php echo $IDCN ?>
         setInterval(function(){ajax();}, 1000);    //refresca la página automáticamente
     </script>
 </head>
@@ -80,21 +79,20 @@
             } 
         ?>
         <div id="caja-chat">
-            
-            
             <div id="chat">
             </div>
-
         </div>
         <form method="POST" action="../Mensajes/mensajes.php?IDBtn=<?php echo $IDCN ?>">
-            <!-- <input type="text" name="nombre" placeholder="Ingresa tu nombre.."> -->
+            <i class="fa-solid fa-paperclip media clip"></i>
+            <i type="submit" class="fa-solid fa-paper-plane media"></i>
+        </form>
+        <form method="POST" action="../Mensajes/mensajes.php?IDBtn=<?php echo $IDCN ?>">
             <textarea name="mensaje" placeholder="Ingresa tu mensaje.."></textarea>
             <input type="submit" name="enviar" value="Enviar"></input>
         </form>
         <?php
             if(isset($_POST['enviar'])){
-                $nombre = "$_SESSION[user]";  //$_POST['nombre'];
-                //$status = "$_SESSION[status]";
+                $nombre = "$_SESSION[user]";
                 $mensaje = $_POST['mensaje'];
                 $mensaje = base64_encode($mensaje);
                 $ID      = rand(10000, 65535);

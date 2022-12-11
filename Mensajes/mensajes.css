@@ -134,6 +134,21 @@ textarea{
     transition: 0.5s all ease-in-out;
 }
 
+.clip{
+    transform: translate(-35px, 0px);
+}
+
+.media{
+    position: absolute;
+    /*background-color: blueviolet;*/
+    right: 13%;
+    font-size: 30px;
+    border: none;
+    margin-top: 3px;
+    cursor: pointer;
+    color: LightSlateGray;
+}
+
 .ubi{
     margin: 20px;
     border: 0px;

@@ -39,7 +39,7 @@
         if(mysqli_query($conexion, $sql)){  //Ejecutamos el query y verificamos si se guardaron los datos
             echo "alert('Tu cuenta ha sido creada')";
             echo "Tu cuenta ha sido creada";
-            header("Location: http://localhost:8080/e-class2/LogIn/LogIn.html");
+            header("Location: http://eclass:8080/LogIn/LogIn.html");
             //echo "<br><a href='../LogIn/LogIn.html'>Iniciar Sesión</a>";
         }else{
             /*echo '<script type="text/javascript">
