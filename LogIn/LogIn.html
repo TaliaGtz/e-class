@@ -13,9 +13,9 @@
     <div class="anim"></div>
     <form method="POST" action="../LogIn/LogIn.php" onsubmit="return validateLogIn()" name="LogIn">
         <label>User</label><br><br>
-        <input name="username" type="text"><br><br><br>
+        <input id="username" name="username" type="text"><br><br><br>
         <label>Contraseña</label><br><br>
-        <input name="password" type="password"><br><br>
+        <input id="password" name="password" type="password"><br><br>
         <br><br><br>
         <button id="LogButton" type="submit">LogIn</button><br><br>
         <a href="../Registro/Register.html">¿No te has registrado aún?</a>
@@ -23,5 +23,28 @@
     
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="LogIn.js"></script>
+    <script>    //?user=unikart
+        const valores = window.location.search;
+        const urlParams = new URLSearchParams(valores);
+        var usuario = urlParams.get('user');
+        console.log(usuario);
+        variable = usuario;
+        obtener(variable);
+
+        function obtener(variable){
+            fetch('http://localhost:8080/e-class2/API/' + variable)
+            .then(datos=>datos.json())
+            .then(datos=>{
+                var resultado = document.getElementById('username');
+                var resultado1 = document.getElementById('password');
+                resultado.value = '';
+                resultado1.value = '';
+                for(let dato of datos){
+                    resultado.value = `${dato.User}`;
+                    resultado1.value = atob(`${dato.Password}`);
+                }
+            })
+        }
+    </script>
 </body>
 </html>
