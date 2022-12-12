@@ -32,7 +32,7 @@
             '$fechaNac  ',
             '$correo    ',
             '$user      ',
-            '$passwordHash  ',
+            '$passwordHash',
             '$rol       ',
             '$ID        ',
             '$fotoPerfil'
