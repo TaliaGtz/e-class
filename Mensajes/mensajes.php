@@ -60,8 +60,13 @@
         }
     ?>
 
+    <?php include("../media/media.php"); ?>
+
     <div id="contenedor">
         <h3><?php echo $CN; ?></h3>
+
+        <!--<i class="fa-solid fa-camera cam"></i>-->
+        
         <form method="POST"><button id="hash" type="submit" name="hash" class="hash enc" value="true">Encriptar</button>
         <button id="hashed" type="submit" name="hashed" class="hash ed" value="true">Desencriptar</button></form>
         <?php  
@@ -82,10 +87,13 @@
             <div id="chat">
             </div>
         </div>
-        <form method="POST" action="../Mensajes/mensajes.php?IDBtn=<?php echo $IDCN ?>">
-            <i class="fa-solid fa-paperclip media clip"></i>
-            <i type="submit" class="fa-solid fa-paper-plane media"></i>
+
+        <form class="userPic" runat="server" method="POST" class="image" enctype="multipart/form-data">
+            <input type="file" id="userPic" name="archivo"/>  <!--disabled-->
+            <i id="mi-boton" class="fa-solid fa-paperclip media clip"></i>
+            <button type="submit" name="guardar" id="sendImg" class="send"><i type="submit" class="fa-solid fa-paper-plane media sub"></i></button>
         </form>
+
         <form method="POST" action="../Mensajes/mensajes.php?IDBtn=<?php echo $IDCN ?>">
             <textarea name="mensaje" placeholder="Ingresa tu mensaje.."></textarea>
             <input type="submit" name="enviar" value="Enviar"></input>
