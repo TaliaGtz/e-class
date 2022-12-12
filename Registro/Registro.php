@@ -26,6 +26,7 @@
 
     if(!$consultaId){   //Si no existe el usuario
         $sql = "INSERT INTO persona VALUES(
+            '0          ',
             '$nombres   ',
             '$apellidos ',
             '$fechaNac  ',
