@@ -15,7 +15,14 @@
                     '$IDChat',
                     '$ID_msg'
                 )";
-        $ejecutar = $conexion->query($sql);
+        $ejecutar1 = $conexion->query($sql);
+        
+        $Per = $_SESSION['IDP'];
+        $sql2 = "UPDATE chat
+                SET Visto = '0'
+                WHERE Nombre = '$Per'";
+        mysqli_query($conexion, $sql2);
+
         if($ejecutar){
             echo    "<audio autoplay>
                         <source src='../Extras/tono-mensaje-3-.mp3' type='audio/mpeg'>

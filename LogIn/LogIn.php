@@ -38,9 +38,9 @@
                     WHERE Nombre = '$Per'";
             mysqli_query($conexion, $sql1);
 
-            $sql2 = "UPDATE chat
-                    SET Visto = '1'
-                    WHERE Nombre = '$Per'";
+            $sql2 = "UPDATE persona
+                    SET Estado = '1'
+                    WHERE User = '$Per'";
             mysqli_query($conexion, $sql2);
 
             header("Location: http://eclass:8080/Home/Home.php");
