@@ -3,14 +3,22 @@ use Symfony\Component\Mailer\Transport;
 use Symfony\Component\Mailer\Mailer;
 use Symfony\Component\Mime\Email;
 
+if(!isset($_GET['bool'])) {
+    ?> <script>
+        if (window.location.href== "http://eclass:8080") {
+            window.location.href = 'http://eclass:8080/Home/Home.php'; 
+        }
+        alert("a");
+    </script> <?php
+}
 
 if ($_GET['bool']==true) {
     $mensajero = $_POST['mensajero'];
     /*echo $mensajero;*/
-    send_email_to_user($mensajero);
+    send_email_to_user($mensajero); 
 }
 else{
-    header("Location: http://eclass:8080/LogIn/LogIn.html");
+    header("Location: http://eclass:8080/Home/Home.php");
 }
  
 function send_email_to_user($email) {

@@ -1,5 +1,5 @@
 <?php
-require "C:/xampp/htdocs/PrograOInternet/config.php";
+require "C:/xampp/htdocs/eclass2/config.php";
  
 try {
     $adapter->authenticate();
