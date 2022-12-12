@@ -2,6 +2,8 @@
     include("../media/imgCode.php");
 
     $IDMedia = rand(10000, 65535);
+    $nombre = "$_SESSION[user]";
+    $IDCN = $_SESSION['ID_Chat'];
     //$_SESSION['ID_media'] = $IDMedia;
     
     if(isset($_REQUEST['guardar'])){
@@ -20,6 +22,17 @@
                         '$binImagen', 
                         '$tipoArchivo'
                     )";
+            
+            $consulta = "INSERT INTO chat(ID_Chat, Nombre, Mensaje) 
+                        VALUES('$IDMedia', '$nombre', '$now')";
+            $ejecutar = $conexion->query($consulta);
+
+            $sql1 = "INSERT INTO chatxmsj 
+                    VALUES(
+                        '$IDCN',
+                        '$IDMedia'
+                    )";
+            mysqli_query($conexion, $sql1);
                     
             if(mysqli_query($conexion, $query)){  //Ejecutamos el query y verificamos si se guardaron los datos
                 //echo "alert('Tu foto ha sido guardada')";

@@ -52,8 +52,17 @@ body a{
     right: 50%;
 }
 
+.name{
+    display: flex;
+}
+
 .mensaje{
     max-width: 87%;
+}
+
+.file{
+    max-width: 30%;
+    max-height: 30%;
 }
 
 .estado{

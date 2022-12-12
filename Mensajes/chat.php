@@ -4,12 +4,9 @@
     include("../PhpFks/validateLogIn.php");
     include("../PhpFks/Fecha.php");
 
-    //$consulta = "SELECT * FROM chat ORDER BY Fecha DESC";
-    //$ejecutar = $conexion->query($consulta);
-
     $IDCN = $_SESSION['ID_Chat'];
     $Crypt = $_SESSION['crypt'];
-    $consultaCxM  =  "SELECT CN.ID_chatName, CM.ID_msg, C.Nombre, C.Mensaje, C.Fecha, C.Estado, C.Visto
+    $consultaCxM  =  "SELECT CN.ID_chatName, CM.ID_msg, C.Nombre, C.Mensaje, C.Fecha, C.Estado, C.Visto, C.ID_Chat
                         FROM chatnames CN
                         INNER JOIN chatxmsj CM ON CN.ID_chatName = CM.ID_Chat
                         INNER JOIN chat C ON CM.ID_msg = C.ID_Chat
@@ -18,6 +15,7 @@
     $ejecutar = $conexion->query($consultaCxM);
 
     while($fila = $ejecutar->fetch_array()):
+
         if($Crypt == '0'){
             $fila['Mensaje']=base64_decode($fila['Mensaje']);
         }
@@ -39,8 +37,23 @@
             }
         ?>
         <div class="mensaje">
-            <span style="color: darkslateblue"><?php echo $fila['Nombre']; ?>: </span>
-            <span><?php echo $fila['Mensaje'] ?></span>
+            <span class="name" style="color: darkslateblue"><?php echo $fila['Nombre']; ?>: </span>
+            
+            <?php 
+                $IDImg = $fila['ID_Chat'];
+                $query="SELECT nombre, tipo, imagen 
+                        FROM media 
+                        WHERE ID_media = '$IDImg'";
+                $query = mysqli_query($conexion, $query);
+                $query = mysqli_fetch_array($query);  //Devuelve un array o NULL
+
+                if($query){  //Imprime la imagen
+                    ?> <img src="data:<?php echo $query['tipo'] ?>;base64,<?php echo base64_encode($query['imagen']); ?>" id="image" class="file"> <?php 
+                }else{  //Imprime el mensaje
+                    ?> <span><?php echo $fila['Mensaje'] ?></span> <?php 
+                }
+            ?>
+            
         </div>
         <div class="fecha">
             <?php
