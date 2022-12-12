@@ -14,13 +14,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-
+    <allow-navigation href="*://*"/>
+    <preference name="Scheme" value="http" />
 </head>
 <body>
 
     <div class="navTitle">
         <h1 class="title">Localización</h1>
     <?php require "../PhpFks/Nav.php"; ?>
+
+    <a href="http://localhost:8080/Loc/Location/Loc.php">Localhost</a>
 
     <div id="mapa" class="mapa"></div>
 
@@ -33,12 +36,12 @@
 
         function getLocation() {
             if (navigator.geolocation) {
-                navigator.geolocation.getCurrentPosition(showPosition);
+                navigator.geolocation.getCurrentPosition(showPosition, showError);
             } else {
                 console.log("Geolocation is not supported by this browser.");
             }
         }
-        //Las mías son: 25.778995712379132, -100.28823484459808
+        //Las mías son: 25.77899571, -100.28823484 
         function showPosition(position) {
             vlatitude = position.coords.latitude + 0.0462853;
             vlongitude = position.coords.longitude - 0.0902444;
@@ -46,7 +49,11 @@
             //alert(vlongitude);
             //return vlatitude + vlongitude;
             console.log("Latitud: " + vlatitude);
-            console.log("Longitud: " + vlongitude); 
+            console.log("Longitud: " + vlongitude);
+        }
+
+        function showError( error ) {
+            console.log( 'getCurrentPosition returned error', error);
         }
 
         
